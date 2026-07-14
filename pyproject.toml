@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mesbg-probability-engine"
+version = "0.1.0"
+description = "Exact, auditable MESBG Duel and damage probability solver"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "MESBG Tournament Assistant project"}]
+dependencies = []
+
+[project.scripts]
+mesbg-probability = "mesbg_probability.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
