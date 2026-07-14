@@ -117,3 +117,7 @@ For runtime use from another project, pin all of:
 - engine version.
 
 Do not fetch moving files from `main` during an analysis.
+
+This is an unofficial, fan-made probability tool and is not affiliated
+with or endorsed by Games Workshop. Middle-earth, MESBG and associated
+names and marks belong to their respective owners.
