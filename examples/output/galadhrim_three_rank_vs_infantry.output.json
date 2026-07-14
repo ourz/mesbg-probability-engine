@@ -1,0 +1,154 @@
+{
+  "duel": {
+    "side_a_win_probability": {
+      "decimal": 0.7192644032921811,
+      "fraction": "5593/7776",
+      "percent": 71.92644032921811
+    },
+    "side_b_win_probability": {
+      "decimal": 0.28073559670781895,
+      "fraction": "2183/7776",
+      "percent": 28.073559670781894
+    }
+  },
+  "engine_version": "0.1.0",
+  "exchange": {
+    "side_a_expected_damage": {
+      "decimal": 1.0788966049382716,
+      "fraction": "5593/5184",
+      "percent": 107.88966049382717
+    },
+    "side_a_kills_target_probability": {
+      "decimal": 0.6293563528806584,
+      "fraction": "39151/62208",
+      "percent": 62.935635288065846
+    },
+    "side_b_expected_damage": {
+      "decimal": 0.1871570644718793,
+      "fraction": "2183/11664",
+      "percent": 18.71570644718793
+    },
+    "side_b_kills_target_probability": {
+      "decimal": 0.14534998872758217,
+      "fraction": "1464793/10077696",
+      "percent": 14.534998872758218
+    }
+  },
+  "if_a_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.875,
+      "fraction": "7/8",
+      "percent": 87.5
+    },
+    "conditional_expected_damage": {
+      "decimal": 1.5,
+      "fraction": "3/2",
+      "percent": 150.0
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.875,
+      "fraction": "7/8",
+      "percent": 87.5
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 0.125,
+        "fraction": "1/8",
+        "percent": 12.5
+      },
+      "1": {
+        "decimal": 0.375,
+        "fraction": "3/8",
+        "percent": 37.5
+      },
+      "2": {
+        "decimal": 0.375,
+        "fraction": "3/8",
+        "percent": 37.5
+      },
+      "3": {
+        "decimal": 0.125,
+        "fraction": "1/8",
+        "percent": 12.5
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 1.0788966049382716,
+      "fraction": "5593/5184",
+      "percent": 107.88966049382717
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.6293563528806584,
+      "fraction": "39151/62208",
+      "percent": 62.935635288065846
+    },
+    "wound_rolls_per_strike": 1
+  },
+  "if_b_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.5177469135802469,
+      "fraction": "671/1296",
+      "percent": 51.77469135802469
+    },
+    "conditional_expected_damage": {
+      "decimal": 0.6666666666666666,
+      "fraction": "2/3",
+      "percent": 66.66666666666667
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.5177469135802469,
+      "fraction": "671/1296",
+      "percent": 51.77469135802469
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 0.48225308641975306,
+        "fraction": "625/1296",
+        "percent": 48.22530864197531
+      },
+      "1": {
+        "decimal": 0.38580246913580246,
+        "fraction": "125/324",
+        "percent": 38.58024691358025
+      },
+      "2": {
+        "decimal": 0.11574074074074074,
+        "fraction": "25/216",
+        "percent": 11.574074074074074
+      },
+      "3": {
+        "decimal": 0.015432098765432098,
+        "fraction": "5/324",
+        "percent": 1.5432098765432098
+      },
+      "4": {
+        "decimal": 0.0007716049382716049,
+        "fraction": "1/1296",
+        "percent": 0.07716049382716049
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 0.1871570644718793,
+      "fraction": "2183/11664",
+      "percent": 18.71570644718793
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.14534998872758217,
+      "fraction": "1464793/10077696",
+      "percent": 14.534998872758218
+    },
+    "wound_rolls_per_strike": 2
+  },
+  "input_sha256": "8128e27a31f9acb3a266811e8104791863f0cb485ce44496b95f2c35e359956c",
+  "metadata": {
+    "assumptions": [
+      "Side A front is D6 and physically trapped if it loses",
+      "Both Court Guard supports and the front model are inside Celeborn's aura",
+      "Side B has lower Fight, two Duel dice, two S3 Strikes, and no banner"
+    ],
+    "faq_current_to": "2026-07-03",
+    "name": "Celeborn aura: shielded Galadhrim plus two Court Guard vs supported infantry",
+    "ruleset": "MESBG 2024"
+  },
+  "schema_version": "combat-output-v1"
+}

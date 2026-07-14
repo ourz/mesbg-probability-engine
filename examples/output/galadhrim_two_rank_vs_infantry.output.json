@@ -1,0 +1,134 @@
+{
+  "duel": {
+    "side_a_win_probability": {
+      "decimal": 0.6103395061728395,
+      "fraction": "791/1296",
+      "percent": 61.03395061728395
+    },
+    "side_b_win_probability": {
+      "decimal": 0.3896604938271605,
+      "fraction": "505/1296",
+      "percent": 38.96604938271605
+    }
+  },
+  "engine_version": "0.1.0",
+  "exchange": {
+    "side_a_expected_damage": {
+      "decimal": 0.6103395061728395,
+      "fraction": "791/1296",
+      "percent": 61.03395061728395
+    },
+    "side_a_kills_target_probability": {
+      "decimal": 0.45775462962962965,
+      "fraction": "791/1728",
+      "percent": 45.77546296296296
+    },
+    "side_b_expected_damage": {
+      "decimal": 0.12988683127572018,
+      "fraction": "505/3888",
+      "percent": 12.988683127572017
+    },
+    "side_b_kills_target_probability": {
+      "decimal": 0.11906292866941015,
+      "fraction": "5555/46656",
+      "percent": 11.906292866941016
+    }
+  },
+  "if_a_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.75,
+      "fraction": "3/4",
+      "percent": 75.0
+    },
+    "conditional_expected_damage": {
+      "decimal": 1.0,
+      "fraction": "1/1",
+      "percent": 100.0
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.75,
+      "fraction": "3/4",
+      "percent": 75.0
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 0.25,
+        "fraction": "1/4",
+        "percent": 25.0
+      },
+      "1": {
+        "decimal": 0.5,
+        "fraction": "1/2",
+        "percent": 50.0
+      },
+      "2": {
+        "decimal": 0.25,
+        "fraction": "1/4",
+        "percent": 25.0
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 0.6103395061728395,
+      "fraction": "791/1296",
+      "percent": 61.03395061728395
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.45775462962962965,
+      "fraction": "791/1728",
+      "percent": 45.77546296296296
+    },
+    "wound_rolls_per_strike": 1
+  },
+  "if_b_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.3055555555555556,
+      "fraction": "11/36",
+      "percent": 30.555555555555557
+    },
+    "conditional_expected_damage": {
+      "decimal": 0.3333333333333333,
+      "fraction": "1/3",
+      "percent": 33.333333333333336
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.3055555555555556,
+      "fraction": "11/36",
+      "percent": 30.555555555555557
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 0.6944444444444444,
+        "fraction": "25/36",
+        "percent": 69.44444444444444
+      },
+      "1": {
+        "decimal": 0.2777777777777778,
+        "fraction": "5/18",
+        "percent": 27.77777777777778
+      },
+      "2": {
+        "decimal": 0.027777777777777776,
+        "fraction": "1/36",
+        "percent": 2.7777777777777777
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 0.12988683127572018,
+      "fraction": "505/3888",
+      "percent": 12.988683127572017
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.11906292866941015,
+      "fraction": "5555/46656",
+      "percent": 11.906292866941016
+    },
+    "wound_rolls_per_strike": 1
+  },
+  "input_sha256": "caaf893b4b9347aba475e1465b1818cd86a26d46962b9c6933883e1171236e7e",
+  "metadata": {
+    "faq_current_to": "2026-07-03",
+    "name": "Celeborn aura: shielded Galadhrim plus one Court Guard vs supported infantry",
+    "ruleset": "MESBG 2024"
+  },
+  "schema_version": "combat-output-v1"
+}

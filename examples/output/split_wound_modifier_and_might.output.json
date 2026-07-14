@@ -1,0 +1,117 @@
+{
+  "duel": {
+    "side_a_win_probability": {
+      "decimal": 0.5833333333333334,
+      "fraction": "7/12",
+      "percent": 58.333333333333336
+    },
+    "side_b_win_probability": {
+      "decimal": 0.4166666666666667,
+      "fraction": "5/12",
+      "percent": 41.666666666666664
+    }
+  },
+  "engine_version": "0.1.0",
+  "exchange": {
+    "side_a_expected_damage": {
+      "decimal": 0.12962962962962962,
+      "fraction": "7/54",
+      "percent": 12.962962962962964
+    },
+    "side_a_kills_target_probability": {
+      "decimal": 0.12962962962962962,
+      "fraction": "7/54",
+      "percent": 12.962962962962964
+    },
+    "side_b_expected_damage": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "side_b_kills_target_probability": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    }
+  },
+  "if_a_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.2222222222222222,
+      "fraction": "2/9",
+      "percent": 22.22222222222222
+    },
+    "conditional_expected_damage": {
+      "decimal": 0.2222222222222222,
+      "fraction": "2/9",
+      "percent": 22.22222222222222
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.2222222222222222,
+      "fraction": "2/9",
+      "percent": 22.22222222222222
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 0.7777777777777778,
+        "fraction": "7/9",
+        "percent": 77.77777777777777
+      },
+      "1": {
+        "decimal": 0.2222222222222222,
+        "fraction": "2/9",
+        "percent": 22.22222222222222
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 0.12962962962962962,
+      "fraction": "7/54",
+      "percent": 12.962962962962964
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.12962962962962962,
+      "fraction": "7/54",
+      "percent": 12.962962962962964
+    },
+    "wound_rolls_per_strike": 1
+  },
+  "if_b_wins": {
+    "conditional_at_least_one_wound_probability": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "conditional_expected_damage": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "conditional_kill_probability": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "damage_distribution": {
+      "0": {
+        "decimal": 1.0,
+        "fraction": "1/1",
+        "percent": 100.0
+      }
+    },
+    "expected_damage_per_combat": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "kill_probability_per_combat": {
+      "decimal": 0.0,
+      "fraction": "0/1",
+      "percent": 0.0
+    },
+    "wound_rolls_per_strike": 1
+  },
+  "input_sha256": "6435e3ba9b8d64e32c9dc7a3325348768ac910c5e450984db3d20783b8468b73",
+  "metadata": {
+    "name": "Split To Wound demonstration: modified 6+/4+ and carried Might"
+  },
+  "schema_version": "combat-output-v1"
+}
