@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mesbg/combat-input-v1.schema.json",
+  "title": "MESBG combat input v1",
+  "type": "object",
+  "required": ["schema_version", "duel", "branches"],
+  "properties": {
+    "schema_version": {"const": "combat-input-v1"},
+    "metadata": {"type": "object"},
+    "duel": {
+      "type": "object",
+      "required": ["side_a", "side_b"],
+      "properties": {
+        "side_a": {"$ref": "#/$defs/side"},
+        "side_b": {"$ref": "#/$defs/side"},
+        "equal_fight_a_win_probability": {"type": ["string", "number"]},
+        "reroll_order": {"type": "array", "items": {"$ref": "#/$defs/poolReroll"}},
+        "might_order": {"type": "array", "items": {"$ref": "#/$defs/mightDecision"}}
+      }
+    },
+    "branches": {
+      "type": "object",
+      "required": ["if_a_wins", "if_b_wins"],
+      "properties": {
+        "if_a_wins": {"$ref": "#/$defs/branch"},
+        "if_b_wins": {"$ref": "#/$defs/branch"}
+      }
+    }
+  },
+  "$defs": {
+    "side": {
+      "type": "object",
+      "required": ["dice"],
+      "properties": {"dice": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/die"}}}
+    },
+    "die": {
+      "type": "object",
+      "required": ["id", "fight"],
+      "properties": {
+        "id": {"type": "string"}, "count": {"type": "integer", "minimum": 1},
+        "fight": {"type": "integer", "minimum": 1}, "modifier": {"type": "integer"},
+        "raw_overrides": {"type": "object"},
+        "reroll_raw_values": {"type": "array", "items": {"type": "integer", "minimum": 1, "maximum": 6}}
+      }
+    },
+    "poolReroll": {
+      "type": "object", "required": ["side"],
+      "properties": {
+        "id": {"type": "string"}, "side": {"enum": ["A", "B", "a", "b"]},
+        "count": {"type": "integer", "minimum": 1},
+        "eligible_dice": {"oneOf": [{"const": "*"}, {"type": "array", "items": {"type": "string"}}]},
+        "forbid_if_currently_winning": {"type": "boolean"}
+      }
+    },
+    "mightDecision": {
+      "type": "object", "required": ["side", "points"],
+      "properties": {
+        "id": {"type": "string"}, "side": {"enum": ["A", "B", "a", "b"]},
+        "points": {"type": "integer", "minimum": 0},
+        "eligible_dice": {"oneOf": [{"const": "*"}, {"type": "array", "items": {"type": "string"}}]}
+      }
+    },
+    "branch": {
+      "type": "object", "required": ["strikes", "target"],
+      "properties": {
+        "strikes": {"type": "array", "items": {"$ref": "#/$defs/strike"}},
+        "target": {"$ref": "#/$defs/target"}
+      }
+    },
+    "strike": {
+      "type": "object", "required": ["id"],
+      "properties": {
+        "id": {"type": "string"}, "count": {"type": "integer", "minimum": 0},
+        "strength": {"type": "integer", "minimum": 1, "maximum": 10},
+        "wound_target": {"oneOf": [{"type": "integer"}, {"type": "array", "minItems": 1, "maxItems": 2, "items": {"type": "integer", "minimum": 2, "maximum": 6}}]},
+        "modifier": {"type": "integer"}, "reroll_rules": {"type": "array"},
+        "might_points_per_roll": {"type": "integer", "minimum": 0},
+        "might_policy": {"enum": ["none", "minimum_to_success"]},
+        "damage_distribution": {"oneOf": [{"type": "integer", "minimum": 0}, {"type": "object"}]}
+      },
+      "anyOf": [{"required": ["strength"]}, {"required": ["wound_target"]}]
+    },
+    "target": {
+      "type": "object", "required": ["defence"],
+      "properties": {
+        "defence": {"type": "integer", "minimum": 1, "maximum": 10},
+        "wounds": {"type": "integer", "minimum": 1},
+        "trapped": {"type": "boolean"}, "prone": {"type": "boolean"},
+        "fate": {"type": "object"}
+      }
+    }
+  }
+}
