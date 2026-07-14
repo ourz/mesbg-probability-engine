@@ -1,0 +1,28 @@
+{
+  "schema_version": "combat-input-v1",
+  "metadata": {
+    "name": "Split To Wound demonstration: modified 6+/4+ and carried Might"
+  },
+  "duel": {
+    "side_a": {"dice": [{"id": "a", "fight": 5}]},
+    "side_b": {"dice": [{"id": "b", "fight": 4}]},
+    "equal_fight_a_win_probability": "1/2"
+  },
+  "branches": {
+    "if_a_wins": {
+      "strikes": [{
+        "id": "hero",
+        "count": 1,
+        "wound_target": [6, 4],
+        "modifier": 0,
+        "might_points_per_roll": 1,
+        "might_policy": "minimum_to_success"
+      }],
+      "target": {"defence": 8, "wounds": 1}
+    },
+    "if_b_wins": {
+      "strikes": [],
+      "target": {"defence": 5, "wounds": 1}
+    }
+  }
+}

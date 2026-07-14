@@ -1,0 +1,33 @@
+{
+  "schema_version": "combat-input-v1",
+  "metadata": {
+    "name": "Three-rank Galadhrim cell receiving a qualifying cavalry charge",
+    "ruleset": "MESBG 2024",
+    "faq_current_to": "2026-07-03",
+    "assumptions": [
+      "Cavalry qualifies for Extra Attack and Knock to the Ground",
+      "Prone already makes the loser Trapped, so physical trapping does not stack"
+    ]
+  },
+  "duel": {
+    "side_a": {"dice": [
+      {"id": "front", "fight": 5},
+      {"id": "court_guard", "count": 2, "fight": 6}
+    ]},
+    "side_b": {"dice": [{"id": "cavalry", "count": 2, "fight": 4}]},
+    "equal_fight_a_win_probability": "2/3"
+  },
+  "branches": {
+    "if_a_wins": {
+      "strikes": [
+        {"id": "front", "count": 1, "strength": 3, "modifier": 1},
+        {"id": "court_guard", "count": 2, "strength": 3, "modifier": 1}
+      ],
+      "target": {"defence": 5, "wounds": 1}
+    },
+    "if_b_wins": {
+      "strikes": [{"id": "cavalry", "count": 2, "strength": 3}],
+      "target": {"defence": 6, "wounds": 1, "trapped": true, "prone": true}
+    }
+  }
+}
